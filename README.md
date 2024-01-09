@@ -1,4 +1,4 @@
-# How to start the project
+# Jest with selenium webdriver
 
 ### Requirements
 - Setup google chrome web driver
