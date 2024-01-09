@@ -5,10 +5,17 @@
 
 ```sh
 npm install
-npm run test
+npm test
 ```
 
+### Generate report
+```sh
+npx allure-commandline serve
+```
+
+> Make sure to delete the allure-results folder
+
 ## Todo
-- Click on leave page
-- Delete operation
-- Edit icon click from the list page
+- [x] Click on leave page
+- [x] Delete operation
+- [x] Edit icon click from the list page

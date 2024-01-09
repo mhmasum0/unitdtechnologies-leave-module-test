@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
-  "type": "module",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^29.5.11"
+    "@types/jest": "^29.5.11",
+    "allure-commandline": "^2.25.0",
+    "allure-jest": "^2.10.0"
   },
   "dependencies": {
     "jest": "^29.7.0",
-    "selenium-webdriver": "^4.16.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "selenium-webdriver": "^4.16.0"
   }
 }
