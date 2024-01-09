@@ -324,7 +324,7 @@ describe('Leave menu and edit leave page icon', () => {
 
   })
 
-  test('TC02 click on edit leave page icon', async () => {
+  test('TC02 Click on edit leave page icon', async () => {
     await allure.step("Click on edit leave page icon", async function() {
       await new Promise(resolve => setTimeout(resolve, 3000));
       const editIcons = await driver.findElements(By.css('#example .editlink'))
@@ -332,7 +332,7 @@ describe('Leave menu and edit leave page icon', () => {
     })
   })
 
-  test('TC03 Bacl to list leave page', async () => {
+  test('TC03 Back to list leave page', async () => {
     await allure.step("Click on back button", async function() {
       await new Promise(resolve => setTimeout(resolve, 3000));
       const allButtons = await driver.findElements(By.css('form >  .mb-3 button'))

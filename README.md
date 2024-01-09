@@ -15,6 +15,10 @@ npx allure-commandline serve
 
 > Make sure to delete the allure-results folder
 
+### Test report screenshot
+![Jest test report](./screenshots/jest-test-report.png)
+![Allure report](./screenshots/allure-test-report.png)
+
 ## Todo
 - [x] Click on leave page
 - [x] Delete operation
