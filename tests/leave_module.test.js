@@ -119,7 +119,7 @@ describe('Add New Leave', () => {
       // Select Employee
       const employeeSelect = await driver.findElement(By.name('employee_id'))
       const select = new Select(employeeSelect)
-      select.selectByVisibleText('mariam ')
+      select.selectByIndex(3)
     })
 
     await allure.step("Select leave from date", async function() {
