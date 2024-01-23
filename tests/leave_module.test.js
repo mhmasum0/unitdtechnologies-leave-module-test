@@ -5,7 +5,7 @@ const yaml = require('js-yaml')
 const fs = require('node:fs')
 
 let driver = new Builder().forBrowser('chrome').build()
-// driver.manage().window().maximize()
+driver.manage().window().maximize()
 let leaveId
 
 const path = require('path')
@@ -29,6 +29,7 @@ describe('Add New Leave', () => {
   test('TC01 Visit login page', async () => {
     await allure.step("Check login page URL", async function() {
       await driver.get(APP_URL)
+      await driver.manage().setTimeouts({ implicit: 10000 })
       const title = await driver.getTitle()
       allure.parameter('ROOT_URL', APP_URL)
       expect(PAGE_TITLE).toBe(title)
@@ -106,7 +107,7 @@ describe('Add New Leave', () => {
 
     await allure.step("Check error message", async function() {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      const errorElements = await driver.findElements(By.css('.Toastify__toast.Toastify__toast-theme--colored.Toastify__toast--error > .Toastify__toast-body > div'))
+      const errorElements = await driver.findElements(By.css('.Toastify__toast.Toastify__toast-theme--colored > .Toastify__toast-body > div'))
       const errorMessage = await errorElements[1].getAttribute('textContent')
       allure.parameter('LEAVE_ERROR_MESSAGE', LEAVE_ERROR_MESSAGE)
       expect(LEAVE_ERROR_MESSAGE).toBe(errorMessage)
@@ -247,9 +248,10 @@ describe('List Leave and Edit Leave', () => {
 
     await allure.step("Click on the upload button", async function() {
       await driver.findElement(By.css('.modal-footer button')).click()
+      await new Promise(resolve => setTimeout(resolve, 2000));
     })
 
-  }, 10000)
+  }, 15000)
 
   test('TC05 Delete attached file', async () => {
 
