@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "allure-commandline": "^2.25.0",
-    "allure-jest": "^2.10.0"
+    "allure-jest": "^2.11.1"
   },
   "dependencies": {
     "jest": "^29.7.0",
